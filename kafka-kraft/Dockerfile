@@ -1,12 +1,13 @@
 FROM openjdk:11
 
 ARG CREATED
+ARG VERSION
 
 LABEL org.opencontainers.image.created=$CREATED
+LABEL org.opencontainers.image.version=$VERSION
 LABEL org.opencontainers.image.title="kafka-kraft"
 LABEL org.opencontainers.image.description="Dockerfile for Kafka Raft metadata mode (KRaft) - without Zookeeper"
 LABEL org.opencontainers.image.source="https://github.com/rmisiarek/dockerfiles/tree/master/kafka-kraft"
-LABEL org.opencontainers.image.version="0.1.0"
 
 
 ENV KAFKA_VERSION=2.8.0 \
